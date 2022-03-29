@@ -20,7 +20,9 @@ let mt = MatrixTraversal()
 let paths = mt.traversalMatrix(target: (2,2)) // how many paths from (0,0) to (2,2) which is a 3x3 array
 
 // how many paths avoiding (row,column) (0,1) & (1,2)
+
 let pathsFiltered = paths.filter{ element in  
+
     return element.contains{ $0 == (0,1) } || element.contains{ $0 == (1,2) }  ? false : true
 }
 print("paths = \\(paths)")
