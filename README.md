@@ -7,11 +7,11 @@ print("C(6,3) = \\(Combinations(6,3))" ) // Should be 20
 
 print("C(6,2) = \\(Combinations(6,2))" ) // Should be 15
 
-print("C(7,3) = \\(Permutations(7,3))" ) // 210
+print("P(7,3) = \\(Permutations(7,3))" ) // 210
 
-print("C(5,3) = \\(Permutations(5,3))" ) // 60
+print("P(5,3) = \\(Permutations(5,3))" ) // 60
 
-print("C(5,2) = \\(Permutations(5,2))" ) // 20
+print("P(5,2) = \\(Permutations(5,2))" ) // 20
 
 Maxtrix Traversal, travel from(0,0) to (m,n), maybe some (x,y) are not allowed
 
