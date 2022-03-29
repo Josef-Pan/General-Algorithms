@@ -25,6 +25,7 @@ let pathsFiltered = paths.filter{ element in
 
     return element.contains{ $0 == (0,1) } || element.contains{ $0 == (1,2) }  ? false : true
 }
+
 print("paths = \\(paths)")
 
 print("pathsFiltered avoiding (0,1) & (1,2)= \(pathsFiltered)")
