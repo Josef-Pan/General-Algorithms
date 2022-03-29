@@ -23,7 +23,7 @@ let paths = mt.traversalMatrix(target: (2,2)) // how many paths from (0,0) to (2
 
 let pathsFiltered = paths.filter{ element in  
 
-    return element.contains{ $0 == (0,1) } || element.contains{ $0 == (1,2) }  ? false : true
+    return element.contains{ $0 == (0,1) || $0 == (1,2) }  ? false : true
 }
 
 print("paths = \\(paths)")
