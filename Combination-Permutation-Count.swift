@@ -18,7 +18,7 @@ func Combinations(_ total: Int, _ selection: Int)->Int{
     return C[total][selection]
 }
 
-/// Permutations= calculation without recursing, using dynamic planning which is highly efficient
+/// Permutation calculation without recursing, using dynamic planning which is highly efficient
 /// P(n, k) = P(n-1, k) + k* P(n-1, k-1)
 /// P(5,3) = 5x4x3 = P(4,3) + 3 * P(4,2)
 /// 5x4x3 = 2*  4*3   + 3 * 4*3
