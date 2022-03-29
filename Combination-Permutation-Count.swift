@@ -18,9 +18,10 @@ func Combinations(_ total: Int, _ selection: Int)->Int{
     return C[total][selection]
 }
 
-// P(n, k) = P(n-1, k) + k* P(n-1, k-1)
-// P(5,3) = 5x4x3 = P(4,3) + 3 * P(4,2)
-// 5x4x3 = 2*  4*3   + 3 * 4*3
+/// Permutations= calculation without recursing, using dynamic planning which is highly efficient
+/// P(n, k) = P(n-1, k) + k* P(n-1, k-1)
+/// P(5,3) = 5x4x3 = P(4,3) + 3 * P(4,2)
+/// 5x4x3 = 2*  4*3   + 3 * 4*3
 func Permutations(_ total: Int, _ selection: Int)->Int{
     var P:[[Int]] = Array(repeating: Array(repeating: 0, count: selection+1), count: total+1)
     for i in 0..<total+1{
