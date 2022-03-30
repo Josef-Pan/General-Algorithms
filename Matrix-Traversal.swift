@@ -9,9 +9,9 @@ class MatrixTraversal {
     /// numWays(i,j) = numWays(i-1,j) + numWays(i,j-1)
     /// targetRow, targetColumn are **0-based**
     /// Parameter- target: a named tuple of row and column
-    func getCountOfTraversal(target: RowCol) -> Int? {
+    func getCountOfTraversal(target: RowCol) -> Int {
         guard  target.row >= 1 ,  target.column >= 1 else {
-            return nil
+            return 0
         } // Travel to positive numbers only
         var ways:[[Int]] = Array(repeating: Array(repeating: -1, count: target.column+1), count: target.row+1)
         ways[0][0] = 1      // Only one way to reach to (0,0)
