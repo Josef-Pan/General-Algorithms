@@ -95,7 +95,7 @@ func minPalPartion(_ string:String, _ i:Int, _ j:Int)->Int{
 /// Dynamic planning design
 /// ✅Even though the code is much longer than recursing, but the time needed for this algorithm is much shorter
 func minPalPartionDP(_ str: String)->Int {
-    let n = str.count
+    let n = str.count // Will be used many times, shorten it
     
     // Create two arrays to build the  solution in bottom up manner
     // C[i][j] = Minimum number of cuts needed for palindrome
@@ -142,7 +142,7 @@ func minPalPartionDP(_ str: String)->Int {
     //Return the min cut value for complete string. i.e., str[0..n-1]
     return C[0][n - 1]
 }
-let string = "a|babbbab|bab|aba".replacingOccurrences(of: "|", with: "")
+let string = "a|babbbab|bab|aba".replacingOccurrences(of: "|", with: "") // Cuts at '|'
 print(string)
 print("Min cuts needed for Palindrome Partitioning =", minPalPartion(string, 0, string.count - 1))
 print("Min cuts needed for Palindrome Partitioning DP = ", minPalPartionDP(string))
