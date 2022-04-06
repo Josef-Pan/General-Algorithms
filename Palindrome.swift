@@ -25,7 +25,7 @@
                             where k varies from i to j-1
  */
 
-import UIKit
+import Foundation
 
 /// Those extensions are availabe at https://github.com/Josef-Pan/Swift-String-Extensions/blob/main/String-Extensions.swift
 extension String {
