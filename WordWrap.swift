@@ -140,7 +140,7 @@ func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
     }
     return (filtered as! [(Int, Int)]).reversed()
 }
-let line = [3, 2, 2, 5]
+let line = [3, 2, 2, 5] // words like "aaa bb cc ddddd"
 let wrap = 6
 let pattern = solveWordWrap(line, wrap)
 let decoded = decodePattern(pattern)
