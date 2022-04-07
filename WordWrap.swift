@@ -132,10 +132,8 @@ func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
     let filtered = pattern_with_idx.reduce(into: [(Int,Int)]()) { result, element in
         if result.isEmpty { // First element is always valid
             result.append(element)
-        } else {
-            if element.1 + 1 == result.last?.0 && element.1 != 0{
-                result.append(element)
-            }
+        } else if element.1 + 1 == result.last?.0 && element.1 != 0 {
+            result.append(element)
         }
     }
     return filtered.reversed()
