@@ -128,8 +128,9 @@ func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
         search pattern-1 which is 3 in index, we found (2,3)
         search pattern-1 which is 1 in index, we found (1,1)
      */
+    // Now filter out the valid entries from pattern_with_idx
     let filtered = pattern_with_idx.reduce(into: [(Int,Int)]()) { result, element in
-        if result.isEmpty {
+        if result.isEmpty { // First element is always valid
             result.append(element)
         } else {
             if element.1 + 1 == result.last?.0 && element.1 != 0{
