@@ -120,7 +120,7 @@ func solveWordWrap(_ line:[Int], _ wrap:Int)->[Int]{
 /// - Returns: pairs of index of words
 func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
     var pattern_with_idx :[(Int, Int)] = []
-    pattern.enumerated().reversed().forEach{ pattern_with_idx.append(($1,$0))}
+    pattern.enumerated().reversed().forEach{ pattern_with_idx.append(($1,$0))} // (pattern,index) in reverse order
     /* pattern_with_idx
         4, 2, 1, 1, 0   the pattern reversed
         4, 3, 2, 1, 0   the index   reversed
