@@ -128,17 +128,16 @@ func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
         search pattern-1 which is 3 in index, we found (2,3)
         search pattern-1 which is 1 in index, we found (1,1)
      */
-    let filtered = pattern_with_idx.reduce(into: []) { result, element in
+    let filtered = pattern_with_idx.reduce(into: [(Int,Int)]()) { result, element in
         if result.isEmpty {
             result.append(element)
         } else {
-            let lastelement = result.last as! (Int,Int) // Safe to convert, we know it is (Int,Int)
-            if element.1 == lastelement.0 - 1 && element.1 != 0{
+            if element.1 + 1 == result.last?.0 && element.1 != 0{
                 result.append(element)
             }
         }
     }
-    return (filtered as! [(Int, Int)]).reversed()
+    return filtered.reversed()
 }
 let line = [3, 2, 2, 5] // words like "aaa bb cc ddddd"
 let wrap = 6
