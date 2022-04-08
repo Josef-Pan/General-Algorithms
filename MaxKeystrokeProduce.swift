@@ -39,7 +39,7 @@
 
 import Foundation
 
-/// A Dynamic Programming based Python3 program to find maximum number of A's 
+/// A Dynamic Programming based solution to find maximum number of A's 
 /// that can be printed using four keys  this function returns the optimal  length string for N keystrokes
 /// - Parameter keystrokes : number of keystrokes allowed
 /// - Returns: maximum number of characters can be produced
