@@ -43,7 +43,7 @@ import Foundation
 /// that can be printed using four keys  this function returns the optimal  length string for N keystrokes
 /// - Parameter keypresses : number of keypresses allowed
 /// - Returns: maximum number of characters can be produced
-func findoptimal(_ keystrokes:Int)->Int{
+func findOptimal(_ keystrokes:Int)->Int{
 
     // The optimal string length is N when N is smaller than 7
     if (keystrokes <= 6){
@@ -75,5 +75,5 @@ func findoptimal(_ keystrokes:Int)->Int{
 }
 
 for N in 1..<21{
-   print("Maximum Number of A's with ", N, " keystrokes is ", findoptimal(N))
+   print("Maximum Number of A's with ", N, " keystrokes is ", findOptimal(N))
 }
