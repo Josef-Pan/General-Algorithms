@@ -41,7 +41,7 @@ import Foundation
 
 /// A Dynamic Programming based Python3 program to find maximum number of A's
 /// that can be printed using four keys  this function returns the optimal  length string for N keystrokes
-/// - Parameter keypresses : number of keypresses allowed
+/// - Parameter keystrokes : number of keystrokes allowed
 /// - Returns: maximum number of characters can be produced
 func findOptimal(_ keystrokes:Int)->Int{
 
