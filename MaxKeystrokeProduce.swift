@@ -66,7 +66,7 @@ func findoptimal(_ keystrokes:Int)->Int{
         // 1. pressing Ctrl-V 1 time  after copying the A's obtained by n-3 keystrokes.
         // 2. pressing Ctrl-V 2 times after copying the A's obtained by n-4 keystrokes.
         // 3. pressing Ctrl-V 3 times after copying the A's obtained by n-5 keystrokes.
-        screen[n] = max(2 * screen[n - 3], max(3 * screen[n - 4], 4 * screen[n - 5]))
+        screen[n] = max(2 * screen[n - 3], 3 * screen[n - 4], 4 * screen[n - 5])
     }
     return screen[keystrokes]
 }
