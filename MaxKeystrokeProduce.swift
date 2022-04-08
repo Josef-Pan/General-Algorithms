@@ -63,6 +63,9 @@ func findoptimal(_ keystrokes:Int)->Int{
     for n in 7..<(keystrokes + 1) {
         
         // for any keystroke n, we will need to choose between:-
+        // n-3 means Ctrl A, Ctrl C, Ctrl V
+        // n-4 means Ctrl A, Ctrl C, Ctrl V, Ctrl V
+        // n-5 means Ctrl A, Ctrl C, Ctrl V, Ctrl V, Ctrl V
         // 1. pressing Ctrl-V 1 time  after copying the A's obtained by n-3 keystrokes.
         // 2. pressing Ctrl-V 2 times after copying the A's obtained by n-4 keystrokes.
         // 3. pressing Ctrl-V 3 times after copying the A's obtained by n-5 keystrokes.
