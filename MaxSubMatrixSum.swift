@@ -65,15 +65,8 @@ func kadaneOnColumn(_ column:[Int], _ start: inout Int, _ finish: inout Int, _ r
 func findMaxSum2DMatrix(_ matrix: [[Int]])->(Int, Int, Int, Int, Int){
     // Variables to store the final output
     var max_sum = Int.min
-    var finalLeft = -1
-    var finalRight = -1
-    var finalTop = -1
-    var finalBottom = -1
-
-   
-    var sum = 0
-    var start = 0
-    var finish = 0
+    var (finalLeft, finalRight, finalTop, finalBottom) = (-1, -1, -1, -1 )
+    var (sum, start, finish) = (0, 0, 0 )
     
     guard matrix.count > 0 && matrix[0].count > 0 else { return (-1, -1, -1, -1, -1) }
     
