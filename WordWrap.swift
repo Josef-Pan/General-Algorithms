@@ -125,8 +125,8 @@ func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
         4, 2, 1, 1, 0   the pattern reversed
         4, 3, 2, 1, 0   the index   reversed
         first element always valid, in this case 4,4 as (pattern,index)
-        search pattern-1 which is 3 in index, we found (2,3) as (pattern,index)
-        search pattern-1 which is 1 in index, we found (1,1) as (pattern,index)
+        then, search pattern-1 which is 3 in index, we found (2,3) as (pattern,index)
+        then, search pattern-1 which is 1 in index, we found (1,1) as (pattern,index)
      */
     // Now filter out the valid entries from pattern_with_idx
     let filtered = pattern_with_idx.reduce(into: [(Int,Int)]()) { result, element in
