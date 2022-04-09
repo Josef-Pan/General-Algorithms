@@ -74,10 +74,7 @@ import Foundation
 /// - Returns: a tuple, (max sum, startingIndex, endIndex) of the target subarray
 func maxSubArraySum(_ array: [Int]) ->(Int, Int, Int){
     var max_so_far = Int.min
-    var max_ending_here = 0
-    var starting_index = 0
-    var ending_index = 0
-    var starting_index_predicted = 0
+    var (max_ending_here, starting_index, ending_index, starting_index_predicted) = (0, 0, 0, 0)
     for i in 0..<array.count{
         max_ending_here += array[i]
         if max_so_far < max_ending_here {
@@ -97,6 +94,9 @@ func maxSubArraySum(_ array: [Int]) ->(Int, Int, Int){
 let array = [-2, -3, 4, -1, -2, 1, 5, -3]
 print(array)
 let (sum, start, end) = maxSubArraySum(array)
-print ("Maximum contiguous sum is \(sum)")
+print ("Maximum contiguous sum is \(sum) with subarray \(array[start...end])")
 print ("Starting Index \(start)")
 print ("Ending Index \(end)")
+
+
+
