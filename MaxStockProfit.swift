@@ -91,8 +91,8 @@ func maxProfit( _ prices:[Int], _ transactions:Int)->Int{
             prev_diff = max(prev_diff, profit[t - 1][i - 1] - prices[i - 1])
             profit[t][i] = max(profit[t][i - 1], prices[i] + prev_diff)
         }
-        print("transactions = \(t)")
-        printArray(profit)
+        // print("transactions = \(t)")
+        // printArray(profit)
     }
     return profit[transactions][prices.count - 1]
 }
