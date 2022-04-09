@@ -1,4 +1,3 @@
-
 /*
  Given a value N, if we want to make change for N cents, and we have infinite supply of each of S = { S1, S2, .. , Sm}
  valued coins, how many ways can we make the change? The order of coins doesn’t matter.
@@ -17,7 +16,7 @@ import Foundation
 /// - Parameter coins : the coins set
 /// - Parameter count : coins left to use
 /// - Parameter sum : the sum to achieve with coins left to use
-/// - Returns: maximum number of characters can be produced
+/// - Returns: the number of combinations to get the sum
 func countCoinsCombo(_ coins:[Int], _ count:Int,  _ sum:Int )->Int{
     // If n is 0 then there is 1 solution (do not include any coin)
     if (sum == 0) {
@@ -39,7 +38,7 @@ func countCoinsCombo(_ coins:[Int], _ count:Int,  _ sum:Int )->Int{
 /// The optimal solution
 /// - Parameter coins : the coins set
 /// - Parameter sum : the sum to achieve with coins left to use
-/// - Returns: maximum number of characters can be produced
+/// - Returns: the number of combinations to get the sum
 func countCoinsComboDP(_ coins:[Int], _ sum: Int) -> Int {
     // We need n+1 rows as the table is constructed
     // in bottom up manner using the base case 0 value
