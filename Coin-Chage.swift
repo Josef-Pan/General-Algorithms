@@ -1,3 +1,4 @@
+
 /*
  Given a value N, if we want to make change for N cents, and we have infinite supply of each of S = { S1, S2, .. , Sm}
  valued coins, how many ways can we make the change? The order of coins doesn’t matter.
@@ -63,11 +64,11 @@ func countCoinsComboDP(_ coins:[Int], _ sum: Int) -> Int {
     return table[sum][coins.count-1]
 }
 
-let arr = [2, 5, 3, 6]
-let count = arr.count
+let coins = [2, 5, 3, 6]
+let count = coins.count
 let sum = 10
 
-print("Solutions using recursing = \(countCoinsCombo(arr, count, sum))")
-print("Solutions using DP        = \(countCoinsComboDP(arr, sum))")
+print("Solutions using recursing = \(countCoinsCombo(coins, count, sum))")
+print("Solutions using DP        = \(countCoinsComboDP(coins, sum))")
 
 
