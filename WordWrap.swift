@@ -121,7 +121,7 @@ func solveWordWrap(_ line:[Int], _ wrap:Int)->[Int]{
 func decodePattern( _ pattern: [Int]) ->[(Int,Int)]{
     var pattern_with_idx :[(Int, Int)] = []
     pattern.enumerated().reversed().forEach{ pattern_with_idx.append(($1,$0))} // (pattern,index) in reverse order
-    /* pattern_with_idx in this example with line = [ 3, 2, 2, 5]
+    /* pattern_with_idx in this example with line = [ 3, 2, 2, 5], they are possible (startIndex, endIndex) pairs
         4, 2, 1, 1, 0   the pattern reversed
         4, 3, 2, 1, 0   the index   reversed
         first element always valid, in this case 4,4 as (pattern,index)
