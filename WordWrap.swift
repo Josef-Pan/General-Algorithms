@@ -40,8 +40,9 @@
 import Foundation
 
 /// Dynamic planning solution, this solution is very complicated, needs deep thinking
-/// - Parameter line: Array representing the words of a line, eg. line[] = {3, 2, 2, 5} is for a sentence like "aaa bb cc ddddd".
-/// - Parameter wrap: maximum line width
+/// - Parameters:
+///   - line: Array representing the words of a line, eg. line[] = {3, 2, 2, 5} is for a sentence like "aaa bb cc ddddd".
+///   - wrap: maximum line width
 /// - Returns: a pattern for word arrangement, which will be explained in details in function decodePattern
 func solveWordWrap(_ line:[Int], _ wrap:Int)->[Int]{
     //For simplicity, 1 extra space is used in all below arrays
