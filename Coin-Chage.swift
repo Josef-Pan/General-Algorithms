@@ -14,9 +14,10 @@ import Foundation
 
 /// A basic soltion to demonstrate the solution
 /// 🔴This not an optimal solition, DO NOT use it
-/// - Parameter coins : the coins set
-/// - Parameter count : coins left to use
-/// - Parameter sum : the sum to achieve with coins left to use
+/// - Parameters:
+///   - coins: the coins set
+///   - count: coins left to use
+///   - sum: the sum to achieve with coins left to use
 /// - Returns: the number of combinations to get the sum
 func countCoinsCombo(_ coins:[Int], _ count:Int,  _ sum:Int )->Int{
     // If n is 0 then there is 1 solution (do not include any coin)
@@ -37,8 +38,9 @@ func countCoinsCombo(_ coins:[Int], _ count:Int,  _ sum:Int )->Int{
 
 
 /// The optimal solution
-/// - Parameter coins : the coins set
-/// - Parameter sum : the sum to achieve with coins left to use
+/// - Parameters
+///   - coins: the coins set
+///   - sum: the sum to achieve with coins left to use
 /// - Returns: the number of combinations to get the sum
 func countCoinsComboDP(_ coins:[Int], _ sum: Int) -> Int {
     // We need n+1 rows as the table is constructed
