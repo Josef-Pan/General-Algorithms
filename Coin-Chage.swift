@@ -38,7 +38,7 @@ func countCoinsCombo(_ coins:[Int], _ count:Int,  _ sum:Int )->Int{
 
 
 /// The optimal solution
-/// - Parameters
+/// - Parameters:
 ///   - coins: the coins set
 ///   - sum: the sum to achieve with coins left to use
 /// - Returns: the number of combinations to get the sum
