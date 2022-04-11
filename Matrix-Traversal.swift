@@ -7,8 +7,7 @@ class MatrixTraversal {
     var paths:[[(Int,Int)]] = []
     /// Get number of ways to traverse the matrix, using dynamic planning
     /// numWays(i,j) = numWays(i-1,j) + numWays(i,j-1)
-    /// targetRow, targetColumn are **0-based**
-    /// Parameter- target: a named tuple of row and column
+    /// Parameter target: a named tuple of row and column
     func getCountOfTraversal(target: RowCol) -> Int {
         guard  target.row >= 1 ,  target.column >= 1 else {
             return 0
@@ -30,6 +29,7 @@ class MatrixTraversal {
     }
     /// traversal of matrix from (0,0) to (targetRow,targetColumn), output is (row,col) path series
     /// targetRow, targetColumn are **0-based**
+    /// Parameter target: a named tuple of row and column
     func traversalMatrix( target: RowCol)->[[(Int,Int)]]{
         paths.removeAll()
         guard  target.row >= 1 ,  target.column >= 1 else {
